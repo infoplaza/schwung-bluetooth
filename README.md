@@ -9,18 +9,14 @@ This protocol is created to introduce extra functionality, in the first version 
 
 The protocol is based on GATT https://www.bluetooth.com/specifications/gatt/generic-attributes-overview. At this moment the protocol contains one service with one characteristic. 
 
-
-
-Service | Characteristic | UUID | Values
------------- | -------- | ------------- | --------------
-VRI_SERVICE|  | 713D1000-503E-4C75-BA94-3148F18D941E | 
-- | REQUEST_STATUS |  713D1003-503E-4C75-BA94-3148F18D941E | 0x00 = UNKNOWN <br> 0x01 = GREEN_REQUESTED <br> 0x02 = GREEN_EXTENDED <br> 0x03 = ERROR
+|Service | Characteristic | UUID | Values
+|------------ | -------- | ------------- | --------------
+|VRI_SERVICE|  | 713D1000-503E-4C75-BA94-3148F18D941E | | 
+| | REQUEST_STATUS |  713D1003-503E-4C75-BA94-3148F18D941E | 0x00 = UNKNOWN <br> 0x01 = GREEN_REQUESTED <br> 0x02 = GREEN_EXTENDED <br> 0x03 = ERROR
 
 The status GREEN_REQUESTED means that a request for green is made to the traffic light controller. (That is similar to a detection at a detector loop or button). That can be followed by the status GREEN_EXTENDED in the city of Breda, this status means that the traffic light stays a little bit longer green so the cyclist doesn't have to wait.
 
 
 ## Examples
 
-At this moment there is one example implementation available of a Bluetooth peripheral based on the BLE Nano V2 (https://redbear.cc/product/ble-nano-kit-2.html) to get you started or if you want to experiment with the Bluetooth functionality without having to develop your own device. The source code for this example can be found in this repository.
-
-
+At this moment there is an example implementation available of a Bluetooth peripheral based on the BLE Nano V2 (https://redbear.cc/product/ble-nano-kit-2.html) to get you started or if you want to experiment with the Bluetooth functionality without having to develop your own device. The source code for this example can be found in this repository.
